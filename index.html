@@ -1,8 +1,6 @@
 <head>
     <title>Test Website</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 
 <body>
@@ -13,24 +11,12 @@
     </div>
 
     <!--  -->
-    <py-config>
-        packages = ["pandas", "pytrends", "matplotlib", "seaborn", "datetime"]
-    </py-config>
-    <py-script>
-        import pandas as pd                        
-        from pytrends.request import TrendReq
-        import matplotlib.pyplot as plt
-        import seaborn as sns
-        from datetime import date
-
-        pytrends = TrendReq()
-        pytrends.build_payload(kw_list=['chatGPT'], timeframe='2022-11-01 {}'.format(date.today()))
-
-        df = pytrends.interest_over_time()
-        df = df.reset_index()
-        print(df.head(10))
-        fig1 = sns.relplot(data=df, x="date", y="chatGPT", kind="line")
-        display(fig1, target="fig1")
-    </py-script>
-    <div id="fig1"></div>
+    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3261_RC05/embed_loader.js"> </script>
+    <script type="text/javascript">
+        trends.embed.renderExploreWidget(
+            "TIMESERIES", 
+            {"comparisonItem":[{"keyword":"chatGPT","geo":"US","time":"2022-12-01 2023-02-24"}],"category":0,"property":""},
+            {"exploreQuery":"date=2022-12-01%202023-02-24&geo=US&q=chatGPT","guestPath":"https://trends.google.com:443/trends/embed/"}
+        );
+    </script>
 </body>
