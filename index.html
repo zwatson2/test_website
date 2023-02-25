@@ -7,7 +7,7 @@
     <!--  -->
     <div>
         <h1>HELLO</h1>
-        <p>Does this work? update: 4:01 pm</p>
+        <p>Does this work? update: 4:06 pm</p>
     </div>
 
     <!--  -->
@@ -19,17 +19,15 @@
             {"exploreQuery":"date=2022-12-01%202023-02-24&geo=US&q=chatGPT","guestPath":"https://trends.google.com:443/trends/embed/"}
         );
     </script>
-    <div class="container">
-        <iframe class="responsive-iframe" id="target"
-                src="https://zwatson2-streamlit-test-streamlit-app-ba7vxk.streamlit.app/?embedded=true" 
-                title="streamlit embed test:" >
-        </iframe>
-        <script>
-            var div = document.getElementById("target");
-            div.onload = function() {
-                div.style.height =
-                  div.contentWindow.document.body.scrollHeight + 'px';
-            }
-        </script>
-    </div>
+    <iframe class="responsive-iframe" id="target"
+            src="https://zwatson2-streamlit-test-streamlit-app-ba7vxk.streamlit.app/?embedded=true" 
+            title="streamlit embed test:" >
+    </iframe>
+    <script>
+        var div = document.getElementById("target");
+        div.onload = function() {
+            div.style.height =
+              div.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
 </body>
