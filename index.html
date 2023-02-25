@@ -20,6 +20,16 @@
         );
     </script>
     <div class="container">
-        <iframe class="responsive-iframe" src="https://zwatson2-streamlit-test-streamlit-app-ba7vxk.streamlit.app/?embedded=true" title="streamlit embed test:"></iframe>
+        <iframe class="responsive-iframe" id="target"
+                src="https://zwatson2-streamlit-test-streamlit-app-ba7vxk.streamlit.app/?embedded=true" 
+                title="streamlit embed test:" >
+        </iframe>
+        <script>
+            var div = document.getElementById("target");
+            div.onload = function() {
+                div.style.height =
+                  div.contentWindow.document.body.scrollHeight + 'px';
+            }
+        </script>
     </div>
 </body>
